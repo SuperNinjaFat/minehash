@@ -13,6 +13,7 @@ Description: A simple program for extracting Minecraft's files.
 #include <stdio.h>
 #include <Windows.h>
 
+#include "dialog.h"
 
 using namespace std;
 

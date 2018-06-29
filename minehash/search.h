@@ -5,10 +5,10 @@ Created 6/26/2018
 Description: A simple program for extracting Minecraft's files.
 
 */
-#ifndef DIALOG_H
-#define DIALOG_H
+#ifndef SEARCH_H
+#define SEARCH_H
 
-string promptJson();
+my_tuple searchTuple(my_tuple tl);
 
+#endif // !SEARCH_H
 
-#endif // !DIALOG_H

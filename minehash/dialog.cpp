@@ -7,8 +7,8 @@ Description: A simple program for extracting Minecraft's files.
 */
 #include "Header.h"
 
-DWORD promptJson() {
-
+string promptJson() {
+	/*
 	OPENFILENAME ofn;       // common dialog box structure
 	char szFile[260];       // buffer for file name
 	HWND hwnd = NULL;              // owner window
@@ -31,27 +31,29 @@ DWORD promptJson() {
 	ofn.nMaxFileTitle = 0;
 	ofn.lpstrInitialDir = NULL;
 	ofn.Flags = OFN_PATHMUSTEXIST | OFN_FILEMUSTEXIST;
-
-	DWORD commResult;
-
+	*/
+	cout << "Select the json file for indexing, found under \"C:\\Users\\<username here>\\AppData\\Roaming\\.minecraft\\assets\\indexes\\\"" << endl;
+	/*cin.get();
 	if (GetOpenFileName(&ofn)) {
 		//do stuff witht the information in open
-		cout << "File opened!" << ofn.lpstrFile << endl;
-		commResult = NULL;
+		cout << "json file for indexing: " << ofn.lpstrFile << endl;
+		hf = CreateFile(ofn.lpstrFile, GENERIC_READ,
+			0, (LPSECURITY_ATTRIBUTES)NULL,
+			OPEN_EXISTING, FILE_ATTRIBUTE_NORMAL,
+			(HANDLE)NULL);
 	}
 	else {
 		//user pressed cancel
-		cout << "Canceled!" << endl;
-		commResult = CommDlgExtendedError();
-	}
-	return commResult;
-	
-	//cout << "GetOpenFileNameA(Arg1): " << GetOpenFileNameA(Arg1) << endl;
-
-	//cout << "Arg1: " << Arg1 << endl;
+		DWORD commError = CommDlgExtendedError();
+		if (commError) {
+			cout << "CommDlgExtendedError: " << commError << endl;
+		}
+		else {
+			cout << "Canceled." << endl;
+			return "";
+		}
+	}*/
+	string fileString;//ofn.lpstrFile; //szFile;
+	fileString = "C:\\Users\\super\\AppData\\Roaming\\.minecraft\\assets\\indexes\\1.12.json";//cin >> fileString;
+	return fileString;
 }
-
-//
-//BOOL GetOpenFileNameA(
-//	LPOPENFILENAMEA Arg1
-//);

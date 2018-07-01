@@ -8,7 +8,9 @@ Description: A simple program for extracting Minecraft's files.
 #ifndef DIALOG_H
 #define DIALOG_H
 
-string promptJson();
+string promptPath();
+string promptJson(string minecraftPath);
+string promptLoc();
 
 
 #endif // !DIALOG_H

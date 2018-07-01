@@ -60,7 +60,9 @@ my_tuple tupleMaker(string mapName)
 							std::getline(inputfile, tempMapString);
 							if (tempMapString[TAB_DEFAULT] == '\"') {
 								for (int i = 1; i < tempMapString.size(); i++) {
-									if (tempMapString[TAB_DEFAULT + i] != '\"')
+									if (tempMapString[TAB_DEFAULT + i] == '/')
+										bufferLoc += "\\";
+									else if (tempMapString[TAB_DEFAULT + i] != '\"')
 										bufferLoc += tempMapString[TAB_DEFAULT + i];
 									else
 										i = tempMapString.size();

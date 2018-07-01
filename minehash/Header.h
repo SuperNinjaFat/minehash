@@ -19,7 +19,10 @@ Description: A simple program for extracting Minecraft's files.
 #include <errno.h>
 
 #include <Shobjidl.h>
+#include <shlobj.h>
 #include <shobjidl_core.h>
+#include <filesystem>
+
 using namespace std;
 
 typedef vector< tuple<string, string> > my_tuple;
@@ -28,6 +31,13 @@ typedef vector< tuple<string, string> > my_tuple;
 #include "processJson.h"
 #include "jsonObject.h"
 #include "search.h"
+#include "copyFiles.h"
+
+//Error codes
+
+const int COPY_SUCCESS = 0;
+const int COPY_FAILED = 1;
+const int COPY_SOME_ERRORS = 2;
 
 
 

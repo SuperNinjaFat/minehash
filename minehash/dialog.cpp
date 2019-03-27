@@ -79,7 +79,7 @@ string promptLoc() {
 			//do stuff witht the information in open
 			cout << "Directory to copy to: " << path << endl;
 			SetCurrentDirectory(path);
-			cin.get();
+
 		}
 		else {
 			//user pressed cancel

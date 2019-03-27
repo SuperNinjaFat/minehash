@@ -20,8 +20,9 @@ Description: A simple program for extracting Minecraft's files.
 
 #include <Shobjidl.h>
 #include <shlobj.h>
-#include <shobjidl_core.h>
+#include <shobjidl.h>
 #include <filesystem>
+#include <atlstr.h>
 
 using namespace std;
 

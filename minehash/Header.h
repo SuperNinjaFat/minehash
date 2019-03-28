@@ -25,6 +25,7 @@ Description: A simple program for extracting Minecraft's files.
 
 using namespace std;
 
+//a tuple containing object name, hash, and error code.
 typedef vector< tuple<string, string> > my_tuple;
 
 #include "dialog.h"

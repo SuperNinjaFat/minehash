@@ -28,16 +28,15 @@ int main() {
 	//Then it prompts for the phrase to search for. (for instance, <minecraft/sounds/music/> would extract all files indexed under that location, and <minecraft/sounds/music/menu/menu2.ogg> would extract <menu2.ogg>)
 	tl = searchTuple(tl, minecraftPath);
 	//Then it prompts for the location you want to copy your files to.
-	string extractPath = "C:\\Users\\super\\Desktop\\Temp File Extractions\\Minecraft Soundtrack Extraction";//promptLoc();
+	string extractPath = promptLoc(); //"C:\\Users\\super\\Desktop\\Temp File Extractions\\Minecraft Soundtrack Extraction";
 	int status = copyFiles(tl, extractPath);
 
 	if (status == 0)
 		cout << "All files successfully extracted to \"" << extractPath << "\"." << endl;
 	else if (status == 1)
-		cout << "Error - Files failed to extract to \"" << extractPath << "\"." << endl;
+		cout << "Error - Some files failed to extract to \"" << extractPath << "\"." << endl;
 	else if (status == 2)
-		cout << "Error - Some files successfully extracted to \"" << extractPath << "\"." << endl;
-	cin.get();
+		cout << "Error - All files failed to extract to \"" << extractPath << "\"." << endl;
 	cin.get();
 
 	return 0;

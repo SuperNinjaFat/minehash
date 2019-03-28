@@ -2,7 +2,7 @@
 int copyFiles(my_tuple tl, string copyDir)
 {
 	int status = 0;
-	cout << "copying to \"" << copyDir << "\"." << endl;
+	cout << "Copying to \"" << copyDir << "\":" << endl;
 	const char * fileToCopy;
 	const char * fileCopyTo;
 	string fileCopyTostring;
@@ -34,13 +34,18 @@ int copyFiles(my_tuple tl, string copyDir)
 		fileToCopy = get<1>(*i).c_str();
 		fileCopyTostring = (copyDir + '\\' + get<0>(*i));
 		fileCopyTo = fileCopyTostring.c_str();
+		cout << "   \"" << get<0>(*i) << "\":";
 		CopyFile(fileToCopy, fileCopyTo, TRUE);
 		errorMsg = GetLastError();
-		if (errorMsg == ERROR_FILE_EXISTS)
-			cout << fileCopyTo << " already exists, skipping." << endl;
-		if (errorMsg != 0) {
-			cout << "Error code \"" << errorMsg << "\"." << endl;
+		if (ERROR_FILE_EXISTS == errorMsg) {
+			cout << "   Already exists, skipping." << endl;
+		}
+		else if (0 != errorMsg) {
+			cout << "   Error code \"" << errorMsg << "\"." << endl;
 			status = 1;
+		}
+		else {
+			cout << "   Done." << endl;
 		}
 	}
 	return status;

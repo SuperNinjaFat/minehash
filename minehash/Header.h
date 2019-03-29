@@ -33,6 +33,7 @@ typedef vector< tuple<string, string> > my_tuple;
 #include "jsonObject.h"
 #include "search.h"
 #include "copyFiles.h"
+#include "spacing.h"
 
 //Error codes
 

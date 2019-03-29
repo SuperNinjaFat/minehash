@@ -17,10 +17,25 @@ namespace UnitTest1
 		{
 			//Arrange
 			//Act
-			string testPath = "C:\\Users\\paul.lindberg\\Downloads";
+			string testPath = "C:\\Users\\super\\Downloads";//"C:\\Users\\paul.lindberg\\Downloads";
 			//Assert
-			Assert::AreEqual(testPath, string(promptLoc()));
+			Assert::AreEqual(testPath, promptLoc());
 		}
+		
+		TEST_METHOD(TestMethod2)
+		{
+			//Arrange
+			string stringResulting;
+			string stringFirst;
+			string stringSecond;
+			int spaces;
+			//Act
+			stringFirst = "First String";
+			stringSecond = "Second String";
+			spaces = 30;
+			stringResulting = spacing(stringFirst, stringSecond, spaces);
 
+			Assert::AreEqual(string("First String     Second String"), stringResulting);
+		}
 	};
 }

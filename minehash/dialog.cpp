@@ -42,5 +42,5 @@ string promptLoc() {
 			}
 		}
 	}
-	return path;
+	return path;//string((char*) path);
 }

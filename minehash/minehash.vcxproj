@@ -119,6 +119,7 @@
     <ClInclude Include="jsonObject.h" />
     <ClInclude Include="processJson.h" />
     <ClInclude Include="search.h" />
+    <ClInclude Include="spacing.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="copyFiles.cpp" />
@@ -127,6 +128,7 @@
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="processJson.cpp" />
     <ClCompile Include="search.cpp" />
+    <ClCompile Include="spacing.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

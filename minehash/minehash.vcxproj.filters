@@ -33,6 +33,9 @@
     <ClInclude Include="copyFiles.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="spacing.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -51,6 +54,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="copyFiles.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="spacing.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

@@ -9,7 +9,6 @@ Description: A simple program for extracting Minecraft's files.
 #define DIALOG_H
 
 string promptPath();
-string promptJson(string minecraftPath);
 string promptLoc();
 
 

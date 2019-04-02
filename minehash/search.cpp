@@ -36,7 +36,8 @@ my_tuple searchTuple(my_tuple tl, string objectsPath) {
 				if (amountFound == 0)
 					cout << "\"" << findThis << "\":" << endl;
 				amountFound++;
-				cout << "  " << get<0>(*i) << "    : \"" << hashPath << "\"" << endl;
+				//cout << "  " << get<0>(*i) << "    : \"" << hashPath << "\"" << endl;
+				spacing(("  " + get<0>(*i)), (": \"" + hashPath + "\""), 60);
 			}
 		}
 		if (amountFound == 0)

@@ -34,6 +34,8 @@ typedef vector< tuple<string, string> > my_tuple;
 #include "search.h"
 #include "copyFiles.h"
 #include "spacing.h"
+#include "fileSelect.h"
+#include "menu.h"
 
 //Error codes
 

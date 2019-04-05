@@ -19,7 +19,7 @@ string promptLoc() {
 	TCHAR path[MAX_PATH];
 	BROWSEINFO bi = { 0 };
 	bi.ulFlags = BIF_USENEWUI;
-	//bi.lpszTitle = ("All Folders Automatically Recursed.");
+	bi.lpszTitle = ("All Folders Automatically Recursed.");
 	LPITEMIDLIST pid1 = SHBrowseForFolder(&bi);
 
 	if (pid1 != 0)
@@ -43,4 +43,11 @@ string promptLoc() {
 		}
 	}
 	return path;//string((char*) path);
+}
+
+string promptFil() {
+	//adapted from https://www.codeproject.com/Articles/2604/Browse-Folder-dialog-search-folder-and-all-sub-fol
+	TCHAR path[MAX_PATH];
+	//TODO
+	return path;
 }

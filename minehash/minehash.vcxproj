@@ -115,8 +115,10 @@
   <ItemGroup>
     <ClInclude Include="copyFiles.h" />
     <ClInclude Include="dialog.h" />
+    <ClInclude Include="fileSelect.h" />
     <ClInclude Include="Header.h" />
     <ClInclude Include="jsonObject.h" />
+    <ClInclude Include="menu.h" />
     <ClInclude Include="processJson.h" />
     <ClInclude Include="search.h" />
     <ClInclude Include="spacing.h" />
@@ -124,8 +126,10 @@
   <ItemGroup>
     <ClCompile Include="copyFiles.cpp" />
     <ClCompile Include="dialog.cpp" />
+    <ClCompile Include="fileSelect.cpp" />
     <ClCompile Include="jsonObject.cpp" />
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="menu.cpp" />
     <ClCompile Include="processJson.cpp" />
     <ClCompile Include="search.cpp" />
     <ClCompile Include="spacing.cpp" />

@@ -51,7 +51,7 @@ my_tuple tupleMaker(string mapName)
 		int TAB_DEFAULT = 4;
 		while (!(inputfile.eof())) {
 			std::getline(inputfile, tempMapString);
-			if (tempMapString == "{") {
+			if (tempMapString[0] == '{') {
 				while (!(inputfile.eof())) {
 					std::getline(inputfile, tempMapString);
 					if (tempMapString == "  \"objects\": {") {
@@ -71,7 +71,7 @@ my_tuple tupleMaker(string mapName)
 								std::getline(inputfile, tempMapString);
 								if (tempMapString[14] == '\"') {
 									for (int i = 1; i < tempMapString.size(); i++) {
-											if (tempMapString[14 + i] != '\"')
+										if (tempMapString[14 + i] != '\"')
 											bufferHash += tempMapString[14 + i];
 										else
 											i = tempMapString.size();
@@ -83,7 +83,7 @@ my_tuple tupleMaker(string mapName)
 									std::getline(inputfile, tempMapString); //skip size
 								}
 							}
-							else if (tempMapString[TAB_DEFAULT+1] != ',') {
+							else if (tempMapString[TAB_DEFAULT + 1] != ',') {
 								break;
 							}
 						}
@@ -93,6 +93,7 @@ my_tuple tupleMaker(string mapName)
 				}
 			}
 			else
+				cerr << "error: input json structure not recognized" << endl;
 				break;
 		}
 	}

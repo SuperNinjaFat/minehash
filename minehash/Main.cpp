@@ -14,15 +14,17 @@ int main() {
 	//Then, the user will be prompted for the desired json file found under <.minecraft/assets/indexes>.
 	cout << "Select the json file for indexing, usually under: \"assets\\indexes\\\"" << endl;
 	string jsonPath;
-	jsonPath = "C:\\Users\\super\\AppData\\Roaming\\.minecraft\\assets\\indexes\\1.12.json";//cin >> fileString;//promptJson(minecraftPath);
-	
+	jsonPath = "C:\\Users\\super\\AppData\\Roaming\\.minecraft\\assets\\indexes\\1.15.json";//cin >> fileString;//promptJson(minecraftPath);
+	//TODO:: Uncomment above code and Make promptJson() output the path
 	my_tuple tl = processJson(jsonPath);
-	//JsonObject hf = new JsonObject(promptJson());
-	//if (!hf.getHandle())
-		//return 0;
-	//Then it loads the file into arrays
-	//hf.proccessHandle();
-	//hf.closeHandle();
+	//TODO:: processJson() is broken. Stop using line-by-line file processing and just use Json object processing.
+
+	//JsonObject hf = new JsonObject(promptJson(minecraftPath));//
+	//if (!hf.getHandle())//
+	//	return 0;//
+	////Then it loads the file into arrays//
+	//hf.proccessHandle();//
+	//hf.closeHandle();//
 
 
 	//Then it prompts for the phrase to search for. (for instance, <minecraft/sounds/music/> would extract all files indexed under that location, and <minecraft/sounds/music/menu/menu2.ogg> would extract <menu2.ogg>)
